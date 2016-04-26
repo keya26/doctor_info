@@ -14,7 +14,7 @@
                                 
                             <div class="col-xs-12 col-sm-4 blog-content">
 
-                                <a href="#"><img class="img-responsive img-blog" src="images/blog/blog1.jpg" width="100%" alt="" /></a>
+                                <a href="#"><img class="img-responsive img-blog" src="images/2.jpg" width="100%" alt="" /></a>
                             </div>
                             <div class="col-xs-12 col-sm-6 blog-content">
                                 <h2><a href="https:/www.shsmc.edu.bd" target="_blank">Sir Salimullah Medical College ( AMC SS and Mitford ) Hospital , Dhaka</a></h2>
@@ -46,7 +46,7 @@
                                 
                             <div class="col-xs-12 col-sm-4 blog-content">
 
-                                <a href="#"><img class="img-responsive img-blog" src="images/blog/blog1.jpg" width="100%" alt="" /></a>
+                                <a href="#"><img class="img-responsive img-blog" src="images/2.jpg" width="100%" alt="" /></a>
                             </div>
                             <div class="col-xs-12 col-sm-6 blog-content">
                                 <h2><a href="https://www.shsmc.edu.bd" target="_blank">Shaheed Suhrawardy Medical College</a></h2>
