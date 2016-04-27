@@ -16,7 +16,7 @@
                                 <a href="#"><img class="img-responsive img-blog" src="images/doctor.jpg" width="100%" alt="" /></a>
                             </div>
                             <div class="col-xs-12 col-sm-6 blog-content">
-                                <h2><a href="#">Dr.Md Rafiqul Islam</a></h2>
+                                <h2><a href="#">Dr. Md Rafiqul Islam</a></h2>
                                 <h5>Speciality : Medicine</h5> 
                                 <h5>Educational Qualification : MBBS , MCPS ( Medicine ) , MD ( Medicine )</h5>
                                 <h5>Working Place : Meghna General Hospital Ltd , Popular Diagnostic Centre Ltd</h5>
@@ -43,7 +43,7 @@
                                 <a href="#"><img class="img-responsive img-blog" src="images/doctor.jpg" width="100%" alt="" /></a>
                             </div>
                             <div class="col-xs-12 col-sm-6 blog-content">
-                                <h2><a href="#">Dr.Md Aminul Islam</a></h2>
+                                <h2><a href="#">Dr. Md Aminul Islam</a></h2>
                                 <h5>Speciality : Medicine</h5> 
                                 <h5>Educational Qualification : MBBS ( DMC ) , BCS ( Health) , FCPS ( Medicine )</h5>
                                 <h5>Working Place : Uttara Crescent diagnostic and consultation centers</h5>

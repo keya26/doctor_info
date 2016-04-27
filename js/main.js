@@ -3,9 +3,10 @@ jQuery(function($) {'use strict',
 	//#main-slider
 	$(function(){
 		$('#main-slider.carousel').carousel({
-			interval: 200
+			interval: 8000
 		});
 	});
+
 
 	//Initiat WOW JS
 	new WOW().init();
@@ -26,4 +27,8 @@ jQuery(function($) {'use strict',
 		});
 	});
 
+	//Pretty Photo
+	$("a[rel^='prettyPhoto']").prettyPhoto({
+		social_tools: false
+	});	
 });

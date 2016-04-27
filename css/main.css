@@ -1,4 +1,4 @@
-@import url("googleapi.css");
+@import url(css/googleapi.css);
 
 
 /*************************
@@ -68,6 +68,34 @@ hr {
   border-bottom: 1px solid #fff;
 }
 
+
+.btn-primary {
+  padding: 8px 20px;
+  background: #c52d2f;
+  color: #fff;
+  border-radius: 4px;
+  border:none;
+  margin-top: 10px;
+}
+
+
+.btn-primary:hover, 
+.btn-primary:focus{
+  background: #c52d2f;
+  outline: none;
+  box-shadow: none;
+} 
+
+.btn-transparent {
+  border: 3px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.btn-transparent:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
 a:hover,
 a:focus {
   color: #111;
@@ -94,11 +122,43 @@ body > section {
   text-align: center;
   padding-bottom: 55px;
 }
+
 .lead{
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 }
+
+@-webkit-keyframes scaleIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 
 /*************************
 *******Header******
@@ -117,6 +177,14 @@ body > section {
   background: #191919;
   border-bottom: 1px solid #222;
   line-height: 28px;
+}
+
+.top-number{
+  color: #fff;
+}
+
+.top-number p{
+  margin: 0
 }
 
 .social{
@@ -423,6 +491,37 @@ input.search-form:hover {
   top: -3px;
 }
 
+#main-slider .active .animation.animated-item-1 {
+  -webkit-animation: fadeInUp 300ms linear 300ms both;
+  -moz-animation: fadeInUp 300ms linear 300ms both;
+  -o-animation: fadeInUp 300ms linear 300ms both;
+  -ms-animation: fadeInUp 300ms linear 300ms both;
+  animation: fadeInUp 300ms linear 300ms both;
+}
+
+#main-slider .active .animation.animated-item-2 {
+  -webkit-animation: fadeInUp 300ms linear 600ms both;
+  -moz-animation: fadeInUp 300ms linear 600ms both;
+  -o-animation: fadeInUp 300ms linear 600ms both;
+  -ms-animation: fadeInUp 300ms linear 600ms both;
+  animation: fadeInUp 300ms linear 600ms both;
+}
+
+#main-slider .active .animation.animated-item-3 {
+  -webkit-animation: fadeInUp 300ms linear 900ms both;
+  -moz-animation: fadeInUp 300ms linear 900ms both;
+  -o-animation: fadeInUp 300ms linear 900ms both;
+  -ms-animation: fadeInUp 300ms linear 900ms both;
+  animation: fadeInUp 300ms linear 900ms both;
+}
+
+#main-slider .active .animation.animated-item-4 {
+  -webkit-animation: fadeInUp 300ms linear 1200ms both;
+  -moz-animation: fadeInUp 300ms linear 1200ms both;
+  -o-animation: fadeInUp 300ms linear 1200ms both;
+  -ms-animation: fadeInUp 300ms linear 1200ms both;
+  animation: fadeInUp 300ms linear 1200ms both;
+}
 
 #feature {
   background: #f2f2f2;
@@ -453,7 +552,6 @@ input.search-form:hover {
   margin: 3px;
   border-radius: 100%;
   line-height: 110px;
-  Align:center;
   text-align:center;
   background: #ffffff;
   color: #c52d2f;
@@ -543,6 +641,10 @@ input.search-form:hover {
   opacity: 1;
 }
 
+.accordion h2{
+  margin-bottom: 25px;
+}
+
 /*************************
 ********* About Us Page CSS ******
 **************************/
@@ -562,30 +664,18 @@ input.search-form:hover {
   color:#4e4e4e;
 }
 
-
 .skill-wrap {
   display: block;
   overflow: hidden;
   margin: 60px 0;
 }
 
-.team h4 {
-  margin-top: 0;
-  text-transform: uppercase;
-}
-
-.team h5 {
-  font-weight: 300;
-}
-
-.single-profile-top, 
-.single-profile-bottom {
+.single-profile-top{
   font-weight: 400;
   line-height: 24px;
 }
 
-.single-profile-top, 
-.single-profile-bottom  {
+.single-profile-top {
   border: 1px solid #ddd;
   padding: 15px;
   position: relative;
@@ -594,18 +684,6 @@ input.search-form:hover {
 .media_image {
   margin-bottom: 10px;
 }
-
-.team .btn {
-  background:transparent;
-  font-size: 12px;
-  font-weight: 300;
-  margin-bottom: 3px;
-  padding: 1px 5px;
-  text-transform: uppercase;
-  border:1px solid#ddd;
-  margin-right: 3px;
-}
-
 
 ul.social_icons,
 ul.tag {
@@ -692,29 +770,6 @@ textarea#message{
   margin-top: 20px;
 }
 
-/*********************
-****blog page css*****
-**********************/
-
-.widget {
-  margin-bottom: 60px;
-  padding-left: 0;
-}
-
-.single_comments {
-  margin-bottom: 20px;
-}
-
-.single_comments img {
-  float: left;
-  margin-right: 10px;
-  margin-top: 5px;
-}
-
-.single_comments p {
-  margin-bottom: 0;
-}
-
 .blog-item {
   border-radius: 0;
   overflow: hidden;
@@ -747,7 +802,6 @@ textarea#message{
 .blog .blog-item .blog-content h4 {
   font-size: 14px;
 }
-
 
 ul.pagination > li > a {
   border: 1px solid #F1F1F1;
