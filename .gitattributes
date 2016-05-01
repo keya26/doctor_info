@@ -1,11 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-* text=auto
-*.css linguist-vendored
-*.less linguist-vendored
-
-
 
 # Custom for Visual Studio
 *.cs     diff=csharp
