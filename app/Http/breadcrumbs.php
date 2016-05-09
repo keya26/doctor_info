@@ -26,10 +26,10 @@ Breadcrumbs::register('login', function($breadcrumbs)
 });
 
 // Home > Contact Us
-Breadcrumbs::register('sign_up', function($breadcrumbs)
+Breadcrumbs::register('register', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Sign Up', route('sign_up'));
+    $breadcrumbs->push('Sign Up', route('register'));
 });
 
 Breadcrumbs::register('hospital', function($breadcrumbs)

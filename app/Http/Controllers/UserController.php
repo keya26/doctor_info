@@ -56,15 +56,6 @@ class UserController extends Controller
         return view('users.contact-us');
     }
 
-    public function sign_up()
-    {
-        return view('users.sign-up');
-    }
-
-    public function login()
-    {
-        return view('users.login');
-    }
 
 
     /**

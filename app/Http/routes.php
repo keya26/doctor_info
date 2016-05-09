@@ -28,10 +28,15 @@ Route::get('/doctor', array('as' =>'doctor' ,'uses' => 'UserController@doctor'))
 Route::get('/doctor_info', array('as' =>'doctor_info' ,'uses' => 'UserController@doctor_info'));
 
 Route::get('/contact_us', array('as' =>'contact_us' ,'uses' => 'UserController@contact_us'));
+// Authentication routes...
+Route::get('auth/login', array('as' =>'login' ,'uses' =>'Auth\AuthController@getLogin'));
+Route::post('auth/login', array('as' =>'login' ,'uses' => 'Auth\AuthController@postLogin'));
+Route::get('auth/logout', array('as' =>'logout' ,'uses' =>'Auth\AuthController@getLogout'));
 
-Route::get('/sign_up', array('as' =>'sign_up' ,'uses' => 'UserController@sign_up'));
+// Registration routes...
+Route::get('auth/register',array('as' =>'register' ,'uses' => 'Auth\AuthController@getRegister'));
+Route::post('auth/register', array('as' =>'register' ,'uses' =>'Auth\AuthController@postRegister'));
 
-Route::get('/login', array('as' =>'login' ,'uses' => 'UserController@login'));
 
 
 

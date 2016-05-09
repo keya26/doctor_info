@@ -72,7 +72,7 @@
 					
 					<li <?php if($active == 'login') {echo 'class="active"';} ?>><a href="{!! URL::route('login') !!}">Login</a></li> 
 					
-					<li <?php if($active == 'sign_up') {echo 'class="active"';} ?>><a href="{!! URL::route('sign_up') !!}">Sign Up</a></li> 							
+					<li <?php if($active == 'register') {echo 'class="active"';} ?>><a href="{!! URL::route('register') !!}">Sign Up</a></li> 							
 				</ul>
 			</div>
 		</div><!--/.container-->
