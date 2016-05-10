@@ -24,6 +24,16 @@ Breadcrumbs::register('login', function($breadcrumbs)
     $breadcrumbs->parent('home');
     $breadcrumbs->push('Login', route('login'));
 });
+Breadcrumbs::register('email', function($breadcrumbs)
+{
+    $breadcrumbs->parent('login');
+    $breadcrumbs->push('Reset Password', route('email'));
+});
+Breadcrumbs::register('reset', function($breadcrumbs)
+{
+    $breadcrumbs->parent('login');
+    $breadcrumbs->push('Reset Password', route('reset'));
+});
 
 // Home > Contact Us
 Breadcrumbs::register('register', function($breadcrumbs)

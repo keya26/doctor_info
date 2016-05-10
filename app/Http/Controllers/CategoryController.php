@@ -7,57 +7,17 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-	 
     public function index()
     {
-       //return view('users.index');
+        //
     }
-	
-	public function home()
-	
-    {
-       return view('users.index');
-    }
-
-    public function about_us()
-    {
-        return view('users.about-us');
-    }
-
-    public function hospital()
-    {
-        return view('users.hospital');
-    }
-
-    public function hospital_info()
-    {
-        return view('users.hospital_info');
-    }
-
-    public function doctor()
-    {
-        
-        return view('users.doctor');
-    }
-
-    public function doctor_info()
-    {
-        return view('users.doctor_info');
-    }
-
-    public function contact_us()
-    {
-        return view('users.contact-us');
-    }
-
-
 
     /**
      * Show the form for creating a new resource.

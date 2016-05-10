@@ -37,6 +37,28 @@ Route::get('auth/logout', array('as' =>'logout' ,'uses' =>'Auth\AuthController@g
 Route::get('auth/register',array('as' =>'register' ,'uses' => 'Auth\AuthController@getRegister'));
 Route::post('auth/register', array('as' =>'register' ,'uses' =>'Auth\AuthController@postRegister'));
 
+// Password reset link request routes...
+Route::get('password/email', array('as' =>'email' ,'uses' => 'Auth\PasswordController@getEmail'));
+Route::post('password/email', array('as' =>'email' ,'uses' => 'Auth\PasswordController@postEmail'));
+
+// Password reset routes...
+
+Route::get('password/reset/{token}', [
+        'as' => 'reset',
+        'uses' => 'Auth\PasswordController@getReset'
+    ]);
+
+    Route::post('password/reset/{token}', [
+        'as' => 'resetPost',
+        'uses' => 'Auth\PasswordController@postReset'
+    ]);
+
+// Route::get('password/reset/{token}', ['as' => 'reset', function ($token) {
+//     return view('auth.reset')->with($token);
+// }]);
+// //Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+// Route::post('password/reset',array('as' =>'reset' ,'uses' => 'Auth\PasswordController@postReset'));
+
 
 
 

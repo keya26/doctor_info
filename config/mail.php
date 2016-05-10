@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'influencecse78@gmail.com', 'name' => 'Jahid Mahmud'],
 
     /*
     |--------------------------------------------------------------------------

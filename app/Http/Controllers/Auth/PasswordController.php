@@ -25,8 +25,26 @@ class PasswordController extends Controller
      *
      * @return void
      */
+
+    protected $redirectTo = '/';
+
     public function __construct()
     {
         $this->middleware('guest');
     }
+
+    public function getEmail()
+        {
+            return view('auth.password');
+        }
+
+        public function getReset($token = null)
+        {
+            if (is_null($token))
+            {
+                throw new NotFoundHttpException;
+            }
+
+            return view('auth.reset')->with('token', $token);
+        }
 }
