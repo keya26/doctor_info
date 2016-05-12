@@ -19,6 +19,7 @@ class CreateContactsTable extends Migration
             $table->string('division', 55);
             $table->string('subject', 255);
             $table->string('message', 255);
+            $table->rememberToken();
             $table->timestamps();
         });
     }

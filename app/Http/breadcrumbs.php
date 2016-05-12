@@ -12,10 +12,10 @@ Breadcrumbs::register('about_us', function($breadcrumbs)
 });
 
 // Home > Contact Us
-Breadcrumbs::register('contact_us', function($breadcrumbs)
+Breadcrumbs::register('contact', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Contact Us', route('contact_us'));
+    $breadcrumbs->push('Contact Us', route('contact'));
 });
 
 // Home > Login

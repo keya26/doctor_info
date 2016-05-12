@@ -1,8 +1,17 @@
-<?php $active="contact_us"; ?>
+<?php $active="contact"; ?>
 @extends('layouts.dashboard')
 @section('content') 
 <section id="contact-page">
     <div class="container">
+
+    <div class="flash-message">
+    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+      @if(Session::has('alert-' . $msg))
+
+      <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
+      @endif
+    @endforeach
+  </div> <!-- end .flash-message -->
        
         <div class="row">
             <div class="col-md-8 col-md-offset-4">
@@ -10,7 +19,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Drop Your Message</h3>
                     </div>
-                    {!! Form::open(array('route' => 'contact.store')) !!}
+                    <form action="{{ route('contact.send') }}" method="post" id="contact-form">
                     <div class="panel-body">
                        
                         {!! csrf_field() !!}
@@ -43,9 +52,11 @@
                                 <!-- Change this to a button or input when using this as a form -->
                                 <button type="submit" class="btn btn-lg btn-success btn-block">Submit Message</button>
 
+                                <input type="hidden" value="{{Session::token() }}" name="_token"></input>
+
                             </fieldset>
                     </div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

@@ -77,7 +77,7 @@
 						</ul>
 					</li>
 					
-					<li <?php if($active == 'contact_us') {echo 'class="active"';} ?>><a href="{!! URL::route('contact_us') !!}">Contact Us</a></li>
+					<li <?php if($active == 'contact') {echo 'class="active"';} ?>><a href="{!! URL::route('contact') !!}">Contact Us</a></li>
 					
 					<li <?php if($active == 'login') {echo 'class="active"';} ?>><a href="{!! URL::route('login') !!}">Login</a></li> 
 					

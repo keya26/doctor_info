@@ -58,11 +58,11 @@ class UserController extends Controller
         return view('users.doctor_info');
     }
 
-    public function contact_us(Request $req)
-    {
-        $divisions = Division::all();
-        return view('users.contact-us',['divisions' => $divisions]);
-    }
+    // public function contact_us(Request $req)
+    // {
+    //     $divisions = Division::all();
+    //     return view('users.contact-us',['divisions' => $divisions]);
+    // }
 
 
 

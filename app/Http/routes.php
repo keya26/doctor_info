@@ -10,7 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -27,7 +26,9 @@ Route::get('/doctor', array('as' =>'doctor' ,'uses' => 'UserController@doctor'))
 
 Route::get('/doctor_info', array('as' =>'doctor_info' ,'uses' => 'UserController@doctor_info'));
 
-Route::get('/contact_us', array('as' =>'contact_us' ,'uses' => 'UserController@contact_us'));
+Route::get('/contact', array('as' =>'contact' ,'uses' => 'ContactController@getContactIndex'));
+
+Route::post('/contact', array('as' =>'contact.send' ,'uses' => 'ContactController@postSendMessage'));
 // Authentication routes...
 Route::get('auth/login', array('as' =>'login' ,'uses' =>'Auth\AuthController@getLogin'));
 Route::post('auth/login', array('as' =>'login' ,'uses' => 'Auth\AuthController@postLogin'));
