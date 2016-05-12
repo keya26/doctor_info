@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', array('as' =>'home' ,'uses' => 'UserController@home'));
+Route::get('/', array('as' =>'home' ,'uses' => 'UserController@index'));
 
 Route::get('/about_us', array('as' =>'about_us' ,'uses' => 'UserController@about_us'));
 

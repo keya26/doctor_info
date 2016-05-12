@@ -43,28 +43,37 @@
 					<li <?php if($active == 'hospital') {echo 'class="active"';} ?> class="dropdown" >
 						<a  href="#" class="dropdown-toggle" data-toggle="dropdown">Hospitals <i class="fa fa-angle-down"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href="{!! URL::route('hospital') !!}">Dhaka</a></li>
+							@foreach($divisions as $division)
+								<li><a href="{!! URL::route('hospital') !!}">{{ $division->name }}</a></li>
+
+							@endforeach	
+							<!-- <li><a href="{!! URL::route('hospital') !!}">Dhaka</a></li>
 							<li><a href="{!! URL::route('hospital') !!}">Rajshahi</a></li>
 							<li><a href="{!! URL::route('hospital') !!}">Chiittagong</a></li>
 							<li><a href="{!! URL::route('hospital') !!}">Khulna</a></li>
 							<li><a href="{!! URL::route('hospital') !!}">Sylhet</a></li>
 							<li><a href="{!! URL::route('hospital') !!}">Rangpur</a></li>
 							<li><a href="{!! URL::route('hospital') !!}">Barisal</a></li>
-							<li><a href="{!! URL::route('hospital') !!}">Mymensingh</a></li>
+							<li><a href="{!! URL::route('hospital') !!}">Mymensingh</a></li> -->
 						</ul>
 					</li>
 					
 					<li <?php if($active == 'doctor') {echo 'class="active"';} ?> class="dropdown" >
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Doctors <i class="fa fa-angle-down"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href="{!! URL::route('doctor') !!}">Dhaka</a></li>
+
+						@foreach($divisions as $division)
+								<li><a href="{!! URL::route('doctor') !!}">{{ $division->name }}</a></li>
+
+							@endforeach	
+							<!-- <li><a href="{!! URL::route('doctor') !!}">Dhaka</a></li>
 							<li><a href="{!! URL::route('doctor') !!}">Rajshahi</a></li>
 							<li><a href="{!! URL::route('doctor') !!}">Chiittagong</a></li>
 							<li><a href="{!! URL::route('doctor') !!}">Khulna</a></li>
 							<li><a href="{!! URL::route('doctor') !!}">Sylhet</a></li>
 							<li><a href="{!! URL::route('doctor') !!}">Rangpur</a></li>
 							<li><a href="{!! URL::route('doctor') !!}">Barisal</a></li>
-							<li><a href="{!! URL::route('doctor') !!}">Mymensingh</a></li>
+							<li><a href="{!! URL::route('doctor') !!}">Mymensingh</a></li> -->
 						</ul>
 					</li>
 					

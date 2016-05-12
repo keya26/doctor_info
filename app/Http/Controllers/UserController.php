@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Division;
 
 class UserController extends Controller
 {
@@ -15,9 +16,13 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
 	 
-    public function index()
+    public function index(Request $req)
     {
-       //return view('users.index');
+
+        $divisions = Division::all();
+        //return $divisions;
+       return view('users.index',['divisions' => $divisions]);
+
     }
 	
 	public function home()
@@ -26,9 +31,10 @@ class UserController extends Controller
        return view('users.index');
     }
 
-    public function about_us()
+    public function about_us(Request $req)
     {
-        return view('users.about-us');
+        $divisions = Division::all();
+        return view('users.about-us',['divisions' => $divisions]);
     }
 
     public function hospital()
@@ -52,9 +58,10 @@ class UserController extends Controller
         return view('users.doctor_info');
     }
 
-    public function contact_us()
+    public function contact_us(Request $req)
     {
-        return view('users.contact-us');
+        $divisions = Division::all();
+        return view('users.contact-us',['divisions' => $divisions]);
     }
 
 

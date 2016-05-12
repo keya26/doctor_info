@@ -7,7 +7,6 @@
 
         <form class="form-horizontal" role="form" method="POST" action="{{ route('resetPost',['token' => $token]) }}">
 
-        {!! csrf_field() !!}
 
         <table class="table" style="width: 50%; margin: 0 auto;">
 
@@ -46,6 +45,12 @@
             <tr>
                 <td colspan="2">
                     {!! Form::submit('Submit',array('class' => 'btn')) !!}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="hidden" value="{{ Session::token() }}" name="_token"></input>
                 </td>
             </tr>
         </table>
