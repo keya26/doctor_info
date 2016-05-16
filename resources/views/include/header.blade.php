@@ -47,14 +47,7 @@
 								<li><a href="{!! URL::route('hospital') !!}">{{ $division->name }}</a></li>
 
 							@endforeach	
-							<!-- <li><a href="{!! URL::route('hospital') !!}">Dhaka</a></li>
-							<li><a href="{!! URL::route('hospital') !!}">Rajshahi</a></li>
-							<li><a href="{!! URL::route('hospital') !!}">Chiittagong</a></li>
-							<li><a href="{!! URL::route('hospital') !!}">Khulna</a></li>
-							<li><a href="{!! URL::route('hospital') !!}">Sylhet</a></li>
-							<li><a href="{!! URL::route('hospital') !!}">Rangpur</a></li>
-							<li><a href="{!! URL::route('hospital') !!}">Barisal</a></li>
-							<li><a href="{!! URL::route('hospital') !!}">Mymensingh</a></li> -->
+							
 						</ul>
 					</li>
 					
@@ -66,14 +59,7 @@
 								<li><a href="{!! URL::route('doctor') !!}">{{ $division->name }}</a></li>
 
 							@endforeach	
-							<!-- <li><a href="{!! URL::route('doctor') !!}">Dhaka</a></li>
-							<li><a href="{!! URL::route('doctor') !!}">Rajshahi</a></li>
-							<li><a href="{!! URL::route('doctor') !!}">Chiittagong</a></li>
-							<li><a href="{!! URL::route('doctor') !!}">Khulna</a></li>
-							<li><a href="{!! URL::route('doctor') !!}">Sylhet</a></li>
-							<li><a href="{!! URL::route('doctor') !!}">Rangpur</a></li>
-							<li><a href="{!! URL::route('doctor') !!}">Barisal</a></li>
-							<li><a href="{!! URL::route('doctor') !!}">Mymensingh</a></li> -->
+							
 						</ul>
 					</li>
 					

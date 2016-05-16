@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use App\Division;
 
 class AuthController extends Controller
 {
@@ -36,6 +37,18 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
+
+    }
+
+    public function getLogin() {
+        $divisions = Division::all();
+
+        return view('auth.login',['divisions' => $divisions]);
+    }
+
+    public function getRegister() {
+        $divisions = Division::all();
+        return view('auth.register',['divisions' => $divisions]);
     }
 
     /**

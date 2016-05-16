@@ -1,9 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use App\Division;
 
 class PasswordController extends Controller
 {
@@ -33,18 +37,23 @@ class PasswordController extends Controller
         $this->middleware('guest');
     }
 
-    public function getEmail()
+    public function getEmail(Request $request)
         {
-            return view('auth.password');
+            $divisions = Division::all();
+            $request->session()->flash('alert-success', 'Your Password Reset Link Sent Successfully!');
+            return view('auth.password',['divisions' => $divisions]);
         }
 
-        public function getReset($token = null)
+        public function getReset($token = null,Request $request)
         {
+            $divisions = Division::all();
             if (is_null($token))
             {
                 throw new NotFoundHttpException;
             }
 
-            return view('auth.reset')->with('token', $token);
+            $request->session()->flash('alert-success', 'Your Password Reset Link Sent Successfully!');
+
+            return view('auth.reset',['divisions' => $divisions])->with('token', $token);
         }
 }
