@@ -18,7 +18,7 @@ Route::get('/', array('as' =>'home' ,'uses' => 'UserController@index'));
 
 Route::get('/about_us', array('as' =>'about_us' ,'uses' => 'UserController@about_us'));
 
-Route::get('/hospital', array('as' =>'hospital' ,'uses' => 'UserController@hospital'));
+Route::get('/hospital/{id}', array('as' =>'hospital' ,'uses' => 'UserController@hospital'));
 
 Route::get('/hospital_info', array('as' =>'hospital_info' ,'uses' => 'UserController@hospital_info'));
 

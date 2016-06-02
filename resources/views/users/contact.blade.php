@@ -46,7 +46,8 @@
 
                                 <div class="form-group">
                                     <label>Message *</label>
-                                    <input class="form-control" name="message" id="message" value="{{ old('message') }}" type="text" required="required">
+                                    <textarea class="form-control" name="message" id="message" value="{{ old('message') }}" type="text" required="required">
+                                    </textarea>
                                 </div>
 
                                 <!-- Change this to a button or input when using this as a form -->

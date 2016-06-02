@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 use App\Division;
+use App\District;
 
 class UserController extends Controller
 {
@@ -34,12 +36,30 @@ class UserController extends Controller
     public function about_us(Request $req)
     {
         $divisions = Division::all();
+
         return view('users.about-us',['divisions' => $divisions]);
     }
 
-    public function hospital()
+    public function hospital($token = null)
     {
-        return view('users.hospital');
+        
+        $divisions = Division::all();
+        $divisions=Division::find($token); 
+        $division_id = Input::get('division_id');
+        $districts = District::where('division_id', '=', $division_id)->get();
+        if (is_null($token))
+            {
+                throw new NotFoundHttpException;
+            }
+        return view('users.hospital')->with('divisions',  $divisions)->with('division_id', $token);
+    }
+
+    
+
+
+    public function district()
+    {
+        return view('users.district');
     }
 
     public function hospital_info()
@@ -57,12 +77,6 @@ class UserController extends Controller
     {
         return view('users.doctor_info');
     }
-
-    // public function contact_us(Request $req)
-    // {
-    //     $divisions = Division::all();
-    //     return view('users.contact-us',['divisions' => $divisions]);
-    // }
 
 
 
@@ -95,7 +109,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        // 
+
     }
 
     /**

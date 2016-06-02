@@ -5,7 +5,7 @@
 
     <div class="container">
 
-    
+
 
         <form class="form-horizontal" role="form" method="POST" action="{{ route('resetPost',['token' => $token]) }}">
 
