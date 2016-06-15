@@ -6,79 +6,28 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Input;
-use App\Division;
-use App\District;
 
-class UserController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-	 
-    public function index(Request $req)
+
+
+
+
+
+    public function index()
     {
 
-        $divisions = Division::all();
-        //return $divisions;
-       return view('users.index',['divisions' => $divisions]);
+        /*$chartData = $logger->getLogPercent();*/
 
+        // $chartData = array();
+
+        return view('admin.pages.main');
     }
-	
-	public function home()
-	
-    {
-       return view('users.index');
-    }
-
-    public function about_us(Request $req)
-    {
-        $divisions = Division::all();
-
-        return view('users.about-us',['divisions' => $divisions]);
-    }
-
-    public function hospital($id = null)
-    {
-        
-        //$divisions = Division::all();
-        $divisions=Division::find($id); 
-        $division_id = Input::get('division_id');
-        $districts=District::where('division_id', '=', $division_id)->get();
-        if (is_null($id))
-            {
-                throw new NotFoundHttpException;
-            }
-        return view('users.hospital')->with('divisions',  $divisions)->with('division_id', $division_id);
-    }
-
-    
-
-
-    public function district()
-    {
-        return view('users.district');
-    }
-
-    public function hospital_info()
-    {
-        return view('users.hospital_info');
-    }
-
-    public function doctor()
-    {
-        
-        return view('users.doctor');
-    }
-
-    public function doctor_info()
-    {
-        return view('users.doctor_info');
-    }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -109,8 +58,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        // 
-
+        //
     }
 
     /**

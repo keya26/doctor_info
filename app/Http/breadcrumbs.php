@@ -24,6 +24,12 @@ Breadcrumbs::register('login', function($breadcrumbs)
     $breadcrumbs->parent('home');
     $breadcrumbs->push('Login', route('login'));
 });
+
+Breadcrumbs::register('admin', function($breadcrumbs)
+{
+    $breadcrumbs->parent('login');
+    $breadcrumbs->push('Dashboard', route('admin'));
+});
 Breadcrumbs::register('email', function($breadcrumbs)
 {
     $breadcrumbs->parent('login');
@@ -40,6 +46,11 @@ Breadcrumbs::register('register', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
     $breadcrumbs->push('Sign Up', route('register'));
+});
+
+Breadcrumbs::register('logout', function($breadcrumbs)
+{
+    $breadcrumbs->push('Home', route('logout'));
 });
 
 Breadcrumbs::register('hospital', function($breadcrumbs)

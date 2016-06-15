@@ -62,4 +62,11 @@ Route::get('password/reset/{token}', [
 
 
 
+// Route::get('admin', ['middleware' => 'admin', 'uses' => 'AdminController@index']);
+
+Route::get('/home', [
+        'as' => 'admin',
+        'uses' => 'AdminController@index'
+    ]);
+
 

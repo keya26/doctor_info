@@ -13,13 +13,11 @@
                     <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                         <div class="feature-wrap">
                             @foreach($divisions as $division)
-                              @if($division->id==3)
                                 @foreach($division->districts as $district)
                                     <h2>{{ $district->name }}</h2>
                                     <h3><a  href="{!! URL::route('hospital_info') !!}"> View Details</a></h3>
                                     
                                 @endforeach
-                              @endif 
                             @endforeach 
                             
                         </div>

@@ -12,8 +12,8 @@ class Division extends Model
 	public function districts()
     {
 
-    	$divisions = Division::all(); 
-        $division_id = Input::get('id');
-        return $this->hasMany('App\District');
+    	// $divisions = Division::all(); 
+     //    $division_id = Input::get('id');
+        return $this->hasMany('App\District','division_id');
     }
 }
