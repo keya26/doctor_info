@@ -40,18 +40,22 @@ class UserController extends Controller
         return view('users.about-us',['divisions' => $divisions]);
     }
 
-    public function hospital($id = null)
+    public function hospital($id)
     {
         
-        //$divisions = Division::all();
-        $divisions=Division::find($id); 
-        $division_id = Input::get('division_id');
-        $districts=District::where('division_id', '=', $division_id)->get();
-        if (is_null($id))
-            {
-                throw new NotFoundHttpException;
-            }
-        return view('users.hospital')->with('divisions',  $divisions)->with('division_id', $division_id);
+        $divisions = Division::all();
+
+        $division=Division::find($id); 
+        
+        // $districts=District::where('division_id', '=', $divisions->id)->get();
+        
+        if (!$division)
+        {
+            throw new NotFoundHttpException;
+        }
+        return view('users.hospital')
+                    ->with('divisions',  $divisions)
+                    ->with('division', $division);
     }
 
     
@@ -67,10 +71,22 @@ class UserController extends Controller
         return view('users.hospital_info');
     }
 
-    public function doctor()
+    public function doctor($id)
     {
         
-        return view('users.doctor');
+        $divisions = Division::all();
+
+        $division=Division::find($id); 
+        
+        // $districts=District::where('division_id', '=', $divisions->id)->get();
+        
+        if (!$division)
+        {
+            throw new NotFoundHttpException;
+        }
+        return view('users.doctor')
+                    ->with('divisions',  $divisions)
+                    ->with('division', $division);
     }
 
     public function doctor_info()

@@ -22,7 +22,7 @@ Route::get('/hospital/{id}', array('as' =>'hospital' ,'uses' => 'UserController@
 
 Route::get('/hospital_info', array('as' =>'hospital_info' ,'uses' => 'UserController@hospital_info'));
 
-Route::get('/doctor', array('as' =>'doctor' ,'uses' => 'UserController@doctor'));
+Route::get('/doctor/{id}', array('as' =>'doctor' ,'uses' => 'UserController@doctor'));
 
 Route::get('/doctor_info', array('as' =>'doctor_info' ,'uses' => 'UserController@doctor_info'));
 
