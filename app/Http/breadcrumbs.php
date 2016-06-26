@@ -53,20 +53,34 @@ Breadcrumbs::register('logout', function($breadcrumbs)
     $breadcrumbs->push('Home', route('logout'));
 });
 
-Breadcrumbs::register('hospital', function($breadcrumbs)
+
+Breadcrumbs::register('district', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
+    $breadcrumbs->push('district', route('district'));
+});
+
+Breadcrumbs::register('hospital', function($breadcrumbs)
+{
+    $breadcrumbs->parent('district');
     $breadcrumbs->push('Hospital', route('hospital'));
 });
+
 Breadcrumbs::register('hospital_info', function($breadcrumbs)
 {
     $breadcrumbs->parent('hospital');
     $breadcrumbs->push('Hospital Info', route('hospital_info'));
 });
 
-Breadcrumbs::register('doctor', function($breadcrumbs)
+Breadcrumbs::register('districts', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
+    $breadcrumbs->push('districts', route('districts'));
+});
+
+Breadcrumbs::register('doctor', function($breadcrumbs)
+{
+    $breadcrumbs->parent('districts');
     $breadcrumbs->push('Doctor', route('doctor'));
 });
 Breadcrumbs::register('doctor_info', function($breadcrumbs)
@@ -74,5 +88,20 @@ Breadcrumbs::register('doctor_info', function($breadcrumbs)
     $breadcrumbs->parent('doctor');
     $breadcrumbs->push('Doctor Info', route('doctor_info'));
 });
+
+
+Breadcrumbs::register('category', function($breadcrumbs, $category)
+{
+    $breadcrumbs->parent('blog');
+    $breadcrumbs->push($category->title, route('category', $category->id));
+});
+
+// Home > Blog > [Category] > [Page]
+Breadcrumbs::register('page', function($breadcrumbs, $page)
+{
+    $breadcrumbs->parent('category', $page->category);
+    $breadcrumbs->push($page->title, route('page', $page->id));
+});
+
 
 ?>

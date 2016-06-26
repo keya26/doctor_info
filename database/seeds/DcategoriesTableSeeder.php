@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DoctorCategoryTableSeeder extends Seeder
+class DcategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,9 +11,9 @@ class DoctorCategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('doctorcategory')->truncate();
+        DB::table('dcategories')->truncate();
 
-        DB::table('doctorcategory')->insert([
+        DB::table('dcategories')->insert([
         	[
                 'name'        => 'Medicine',
                 ],

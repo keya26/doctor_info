@@ -17,4 +17,13 @@ class District extends Model
     {
         return $this->belongsTo('App\Division');
     }
+
+    public function category()
+    {
+        return $this->hasmany('App\Categories');
+    }
+    public function dcategory()
+    {
+        return $this->hasmany('App\Dcategories');
+    }
 }

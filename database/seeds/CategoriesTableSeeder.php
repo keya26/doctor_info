@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class HospitalCategoryTableSeeder extends Seeder
+class CategoriesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,9 +11,9 @@ class HospitalCategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('hospitalcategory')->truncate();
+        DB::table('categories')->truncate();
 
-        DB::table('hospitalcategory')->insert([
+        DB::table('categories')->insert([
         	[
                 'name'        => 'Hospital',
                 ],

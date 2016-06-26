@@ -21,7 +21,7 @@
        
        @include('include.header')
 	   
-	   {!! Breadcrumbs::render() !!}
+	     {!! Breadcrumbs::render() !!}
        
 
        @yield('content')

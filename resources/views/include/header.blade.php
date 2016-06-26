@@ -45,7 +45,7 @@
 						<ul class="dropdown-menu">
 							@foreach($divisions as $division)
 
-								<li><a href="{!! URL::route('hospital', $division['id']) !!}">{{ $division['name'] }}</a></li>
+								<li><a href="{!! URL::route('district', $division['id']) !!}">{{ $division['name'] }}</a></li>
 
 							@endforeach	
 							
@@ -57,7 +57,7 @@
 						<ul class="dropdown-menu">
 
 						@foreach($divisions as $division)
-								<li><a href="{!! URL::route('doctor',$division['id']) !!}">{{ $division->name }}</a></li>
+								<li><a href="{!! URL::route('districts',$division['id']) !!}">{{ $division->name }}</a></li>
 
 							@endforeach	
 							

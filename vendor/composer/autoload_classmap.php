@@ -6,16 +6,21 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CategoriesTableSeeder' => $baseDir . '/database/seeds/CategoriesTableSeeder.php',
+    'CreateCategoriesTable' => $baseDir . '/database/migrations/2016_06_26_182014_create_categories_table.php',
     'CreateContactsTable' => $baseDir . '/database/migrations/2016_05_06_125814_create_contacts_table.php',
+    'CreateDcategoriesTable' => $baseDir . '/database/migrations/2016_06_26_184551_create_dcategories_table.php',
     'CreateDistrictsTable' => $baseDir . '/database/migrations/2016_04_28_165809_create_districts_table.php',
     'CreateDivisionsTable' => $baseDir . '/database/migrations/2016_04_28_165357_create_divisions_table.php',
     'CreateDoctorcategoryTable' => $baseDir . '/database/migrations/2016_04_28_182346_create_doctorcategory_table.php',
     'CreateDoctorsTable' => $baseDir . '/database/migrations/2016_04_28_183329_create_doctors_table.php',
+    'CreateHospitalCategoriesTable' => $baseDir . '/database/migrations/2016_06_25_191050_create_hospital_categories_table.php',
     'CreateHospitalcategoryTable' => $baseDir . '/database/migrations/2016_04_28_182333_create_hospitalcategory_table.php',
     'CreateHospitalsTable' => $baseDir . '/database/migrations/2016_04_28_183311_create_hospitals_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
+    'DcategoriesTableSeeder' => $baseDir . '/database/seeds/DcategoriesTableSeeder.php',
     'DistrictTableSeeder' => $baseDir . '/database/seeds/DistrictTableSeeder.php',
     'DivisionTableSeeder' => $baseDir . '/database/seeds/DivisionTableSeeder.php',
     'DoctorCategoryTableSeeder' => $baseDir . '/database/seeds/DoctorCategoryTableSeeder.php',

@@ -18,11 +18,15 @@ Route::get('/', array('as' =>'home' ,'uses' => 'UserController@index'));
 
 Route::get('/about_us', array('as' =>'about_us' ,'uses' => 'UserController@about_us'));
 
-Route::get('/hospital/{id}', array('as' =>'hospital' ,'uses' => 'UserController@hospital'));
+Route::get('/district/{id}', array('as' =>'district' ,'uses' => 'UserController@district'));
+
+Route::get('/district/hospital/{id}', array('as' =>'hospital' ,'uses' => 'UserController@hospital'));
 
 Route::get('/hospital_info', array('as' =>'hospital_info' ,'uses' => 'UserController@hospital_info'));
 
-Route::get('/doctor/{id}', array('as' =>'doctor' ,'uses' => 'UserController@doctor'));
+Route::get('/districts/{id}', array('as' =>'districts' ,'uses' => 'UserController@districts'));
+
+Route::get('/districts/doctor/{id}', array('as' =>'doctor' ,'uses' => 'UserController@doctor'));
 
 Route::get('/doctor_info', array('as' =>'doctor_info' ,'uses' => 'UserController@doctor_info'));
 

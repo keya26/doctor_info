@@ -17,10 +17,10 @@ class DatabaseSeeder extends Seeder
         // $this->call(UserTableSeeder::class);
         $this->call(DivisionTableSeeder::class);
         $this->call(DistrictTableSeeder::class);
-        $this->call(HospitalCategoryTableSeeder::class);
-        $this->call(DoctorCategoryTableSeeder::class);
         $this->call(HospitalTableSeeder::class);
         $this->call(DoctorTableSeeder::class);
+        $this->call(CategoriesTableSeeder::class);
+        $this->call(DcategoriesTableSeeder::class);
 
         Model::reguard();
     }
