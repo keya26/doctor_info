@@ -17,12 +17,14 @@
                             <div class="col-xs-12 col-sm-4 blog-content">
                                 <a href="#"><img class="img-responsive img-blog" src="images/doctor.jpg" width="100%" alt="" /></a>
                             </div>
-                            <div class="col-xs-12 col-sm-6 blog-content">
-                                <h2><a href="#">Dr. Md Rafiqul Islam</a></h2>
-                                <h5>Speciality : Medicine</h5> 
-                                <h5>Educational Qualification : MBBS , MCPS ( Medicine ) , MD ( Medicine )</h5>
-                                <h5>Working Place : Meghna General Hospital Ltd , Popular Diagnostic Centre Ltd</h5>
-                            </div>
+                            @foreach($division->districts as $district)
+                                @foreach($district->doctors as $doctor)
+                                <div class="col-xs-12 col-sm-6 blog-content">
+                                    <h2><a href="#">{{ $doctors->name }}</a></h2>
+                                    
+                                </div>
+                                @endforeach
+                             @endforeach
                             <div class="col-xs-12 col-sm-2 blog-content">
                                 <h2><a href="#">Share</a></h2>
                                 <ul class="social-share">

@@ -15,8 +15,9 @@ class CreateHospitalsTable extends Migration
         Schema::create('hospitals', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
-            $table->integer('hospitalcategory_id');
-            $table->integer('districts_id');
+            $table->integer('division_id');
+            $table->integer('category_id');
+            $table->integer('district_id');
             $table->string('address');
             $table->string('ownership');
             $table->integer('activities');

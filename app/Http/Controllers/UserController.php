@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 use App\Division;
-
+use App\District;
+use App\Category;
+use App\Dcategory;
+use App\Hospital;
+use App\Doctor;
 class UserController extends Controller
 {
     /**
@@ -34,35 +39,145 @@ class UserController extends Controller
     public function about_us(Request $req)
     {
         $divisions = Division::all();
+
         return view('users.about-us',['divisions' => $divisions]);
     }
 
-    public function hospital()
-    {
-        return view('users.hospital');
-    }
+    
 
-    public function hospital_info()
-    {
-        return view('users.hospital_info');
-    }
-
-    public function doctor()
+    public function district($id)
     {
         
-        return view('users.doctor');
+        $divisions = Division::all();
+
+        $division=Division::find($id); 
+        
+        $district=District::find($id); 
+
+        // $districts=District::where('division_id', '=', $divisions->id)->get();
+        
+        if (!$division)
+        {
+            throw new NotFoundHttpException;
+        }
+        return view('users.district')
+                    ->with('divisions',  $divisions)
+                    ->with('division', $division)
+                    ->with('district', $district);
     }
 
-    public function doctor_info()
+    public function districts($id)
     {
-        return view('users.doctor_info');
+        $divisions = Division::all();
+
+        $division=Division::find($id); 
+        
+        // $districts=District::where('division_id', '=', $divisions->id)->get();
+        
+        if (!$division)
+        {
+            throw new NotFoundHttpException;
+        }
+        return view('users.district2')
+                    ->with('divisions',  $divisions)
+                    ->with('division', $division);
     }
 
-    // public function contact_us(Request $req)
-    // {
-    //     $divisions = Division::all();
-    //     return view('users.contact-us',['divisions' => $divisions]);
-    // }
+
+    public function hospital($id)
+    {
+        
+         $divisions = Division::all();
+         $division=Division::find($id); 
+
+         $district=District::find($id); 
+
+         $categories=Category::all();
+        
+        // $districts=District::where('division_id', '=', $divisions->id)->get();
+        
+        // if (!$district)
+        // {
+        //     throw new NotFoundHttpException;
+        // }
+        return view('users.hospital')
+                    ->with('divisions',  $divisions)
+                    ->with('division', $division)
+                    ->with('district', $district)
+                    ->with('categories',$categories);
+    }
+
+
+    public function hospital_info($id)
+    {
+        $divisions = Division::all();
+         $division=Division::find($id); 
+
+         $district=District::find($id); 
+
+         $categories=Category::all();
+         $hospitals=Hospital::find($id); 
+        
+        // $districts=District::where('division_id', '=', $divisions->id)->get();
+        
+        // if (!$district)
+        // {
+        //     throw new NotFoundHttpException;
+        // }
+        return view('users.hospital_info')
+                    ->with('divisions',  $divisions)
+                    ->with('division', $division)
+                    ->with('district', $district)
+                    ->with('categories',$categories)
+                    ->with('hospitals',$hospitals);
+    }
+
+    public function doctor($id)
+    {
+        
+        $divisions = Division::all();
+
+        $division=Division::find($id);
+        $district=District::find($id); 
+
+        $dcategories=Dcategory::all(); 
+        
+        // $districts=District::where('division_id', '=', $divisions->id)->get();
+        
+        // if (!$division)
+        // {
+        //     throw new NotFoundHttpException;
+        // }
+        return view('users.doctor')
+                    ->with('divisions',  $divisions)
+                    ->with('division', $division)
+                    ->with('district', $district)
+                    ->with('dcategories',$dcategories);
+    }
+
+    public function doctor_info($id)
+    {
+        $divisions = Division::all();
+         $division=Division::find($id); 
+
+         $district=District::find($id); 
+
+         $dcategories=Dcategory::all();
+         $doctor=doctor::find($id);  
+        
+        // $districts=District::where('division_id', '=', $divisions->id)->get();
+        
+        // if (!$district)
+        // {
+        //     throw new NotFoundHttpException;
+        // }
+        return view('users.doctor_info')
+                    ->with('divisions',  $divisions)
+                    ->with('division', $division)
+                    ->with('district', $district)
+                    ->with('dcategories',$dcategories)
+                    ->with('doctor',$doctor);
+    }
 
 
 
@@ -95,7 +210,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        // 
+
     }
 
     /**

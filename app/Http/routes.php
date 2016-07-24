@@ -18,13 +18,17 @@ Route::get('/', array('as' =>'home' ,'uses' => 'UserController@index'));
 
 Route::get('/about_us', array('as' =>'about_us' ,'uses' => 'UserController@about_us'));
 
-Route::get('/hospital', array('as' =>'hospital' ,'uses' => 'UserController@hospital'));
+Route::get('/district/{id}', array('as' =>'district' ,'uses' => 'UserController@district'));
 
-Route::get('/hospital_info', array('as' =>'hospital_info' ,'uses' => 'UserController@hospital_info'));
+Route::get('/district/hospital/{id}', array('as' =>'hospital' ,'uses' => 'UserController@hospital'));
 
-Route::get('/doctor', array('as' =>'doctor' ,'uses' => 'UserController@doctor'));
+Route::get('/district/hospital/hospital_info/{id}', array('as' =>'hospital_info' ,'uses' => 'UserController@hospital_info'));
 
-Route::get('/doctor_info', array('as' =>'doctor_info' ,'uses' => 'UserController@doctor_info'));
+Route::get('/districts/{id}', array('as' =>'districts' ,'uses' => 'UserController@districts'));
+
+Route::get('/districts/doctor/{id}', array('as' =>'doctor' ,'uses' => 'UserController@doctor'));
+
+Route::get('/districts/doctor/doctor_info/{id}', array('as' =>'doctor_info' ,'uses' => 'UserController@doctor_info'));
 
 Route::get('/contact', array('as' =>'contact' ,'uses' => 'ContactController@getContactIndex'));
 
@@ -61,5 +65,17 @@ Route::get('password/reset/{token}', [
 // Route::post('password/reset',array('as' =>'reset' ,'uses' => 'Auth\PasswordController@postReset'));
 
 
+
+// Route::get('admin', ['middleware' => 'admin', 'uses' => 'AdminController@index']);
+
+Route::get('/home', ['middleware' => 'auth',
+        'as' => 'admin',
+        'uses' => 'AdminController@index'
+    ]);
+
+// Route::get('/home', [
+//         'as' => 'admin',
+//         'uses' => 'AdminController@index'
+//     ]);
 
 

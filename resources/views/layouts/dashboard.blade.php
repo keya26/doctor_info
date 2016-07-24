@@ -12,7 +12,7 @@
     {!! Html::style('css/prettyPhoto.css') !!} 
     {!! Html::style('css/animate.min.css') !!} 
     {!! Html::style('css/main.css') !!} 
-	{!! Html::style('css/responsive.css') !!} 
+	  {!! Html::style('css/responsive.css') !!} 
 	
     @yield('style')
 
@@ -21,7 +21,7 @@
        
        @include('include.header')
 	   
-	   {!! Breadcrumbs::render() !!}
+	     {!! Breadcrumbs::render() !!}
        
 
        @yield('content')

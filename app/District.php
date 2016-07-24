@@ -8,7 +8,7 @@ class District extends Model
 {
     protected $fillable=[
         'name',
-        'divisions_id',
+        'division_id',
     ];
 
     
@@ -16,5 +16,19 @@ class District extends Model
     public function division()
     {
         return $this->belongsTo('App\Division');
+    }
+
+    public function category()
+    {
+        return $this->hasmany('App\Categories');
+    }
+    public function dcategory()
+    {
+        return $this->hasmany('App\Dcategories');
+    }
+
+    public function hospital()
+    {
+        return $this->hasmany('App\Hospital');
     }
 }

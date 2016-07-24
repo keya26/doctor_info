@@ -20,7 +20,9 @@ class DoctorTableSeeder extends Seeder
          DB::table('doctors')->insert([
             [
                 'name'              => 'Prof. Dr. Md Aminul Islam',
-                'doctorcategory_id' => '1',
+                'division_id' => '1',
+                'district_id' => '1',
+                'dcategory_id' => '1',
                 'education'         => 'MBBS,MCPS ( Medicine ),MD ( nephrolaji )',
                 'hospital'          => 'Meghna General Hospital Ltd,Bushra Clinic',
                 'fee'               => '500',
@@ -29,7 +31,9 @@ class DoctorTableSeeder extends Seeder
 
                 [
                 'name'              => 'Brigadier General Prof Dr Rahman sayadura',
-                'doctorcategory_id' => '3',
+                'division_id' => '1',
+                'district_id' => '1',
+                'dcategory_id' => '1',
                 'education'         => 'MBBS , DO , MCPS , FCPS',
                 'hospital'          => 'Asian Eye Hospital',
                 'fee'               => '500',
@@ -38,7 +42,9 @@ class DoctorTableSeeder extends Seeder
 
                 [
                 'name'              => 'Dr. Mohammad Nasim Pervez',
-                'doctorcategory_id' => '3',
+                'division_id' => '1',
+                'district_id' => '1',
+                'dcategory_id' => '1',
                 'education'         => 'MBBS , DO',
                 'hospital'          => 'Al - marakajula Islamic Hospital',
                 'fee'               => '500',
@@ -46,7 +52,9 @@ class DoctorTableSeeder extends Seeder
                 ],
                 [
                 'name'              => 'Prof. Dr. Mohammad Raushan Ali',
-                'doctorcategory_id' => '4',
+                'division_id' => '1',
+                'district_id' => '1',
+                'dcategory_id' => '1',
                 'education'         => 'MBBS , MCPS , ditisidi , FCPS ( Med ) , MD ( card ) , FR CP ( Edin ) , ephaesipi ( USA ) , ephaesisi ( USA )',
                 'hospital'          => 'Popular Diagnostic Centre Ltd.',
                 'fee'               => '800',
@@ -54,7 +62,9 @@ class DoctorTableSeeder extends Seeder
                 ],
                 [
                 'name'              => 'Dr. Ashok Dutta',
-                'doctorcategory_id' => '4',
+                'division_id' => '1',
+                'district_id' => '1',
+                'dcategory_id' => '1',
                 'education'         => 'MBBS , FCPS ( Medicine ) , MD ( Cardiology ) , eephaesisi ( USA )',
                 'hospital'          => 'Mediteka General Hospital proh Ltd.',
                 'fee'               => '500',
@@ -62,7 +72,9 @@ class DoctorTableSeeder extends Seeder
                 ],
                 [
                 'name'              => 'Prof. Dr. Mohammad Billal Alam',
-                'doctorcategory_id' => '1',
+                'division_id' => '1',
+                'district_id' => '1',
+                'dcategory_id' => '1',
                 'education'         => 'MBBS , FCPS ( Medicine ) , MD ( Internal Medicine ) , emaesipi , FCPS ( America )',
                 'hospital'          => 'Uttara Crescent diagnostic and consultation center',
                 'fee'               => '500',

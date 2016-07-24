@@ -24,7 +24,7 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
-    protected $redirectPath = '/';
+    //protected $redirectPath = 'admin.pages.main';
 
         
     protected $username = 'username';
@@ -44,7 +44,11 @@ class AuthController extends Controller
         $divisions = Division::all();
 
         return view('auth.login',['divisions' => $divisions]);
+
+        // return Redirect::route('admin.dashboard');
     }
+
+    
 
     public function getRegister() {
         $divisions = Division::all();

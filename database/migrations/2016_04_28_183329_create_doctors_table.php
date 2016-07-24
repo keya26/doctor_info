@@ -15,7 +15,9 @@ class CreateDoctorsTable extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('doctorcategory_id');
+            $table->integer('division_id');
+            $table->integer('dcategory_id');
+            $table->integer('district_id');
             $table->string('education');
             $table->string('hospital');
             $table->integer('fee');
