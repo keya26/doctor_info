@@ -24,6 +24,7 @@ Route::get('/district/hospital/{id}', array('as' =>'hospital' ,'uses' => 'UserCo
 
 Route::get('/district/hospital/hospital_info/{id}', array('as' =>'hospital_info' ,'uses' => 'UserController@hospital_info'));
 
+Route::get('/district/hospital/hospital_info/doctor_list/{id}', array('as' =>'doctor_list' ,'uses' => 'UserController@doctor_list'));
 Route::get('/districts/{id}', array('as' =>'districts' ,'uses' => 'UserController@districts'));
 
 Route::get('/districts/doctor/{id}', array('as' =>'doctor' ,'uses' => 'UserController@doctor'));
@@ -72,6 +73,13 @@ Route::get('/home', ['middleware' => 'auth',
         'as' => 'admin',
         'uses' => 'AdminController@index'
     ]);
+Route::get('/profile', array('as' =>'profile' ,'uses' => 'ProfileController@index'));
+
+// // blog
+//         Route::resource('profile', 'ProfileController', array('before' => 'hasAccess:profile'));
+//         Route::get('profile/{id}/delete', array('as' => 'admin.profile.delete',
+//                                                 'uses' => 'ProfileController@confirmDestroy', ))->where('id', '\d+');
+
 
 // Route::get('/home', [
 //         'as' => 'admin',

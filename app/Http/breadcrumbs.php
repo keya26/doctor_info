@@ -72,6 +72,12 @@ Breadcrumbs::register('hospital_info', function($breadcrumbs)
     $breadcrumbs->push('Hospital Info', route('hospital_info'));
 });
 
+Breadcrumbs::register('doctor_list', function($breadcrumbs)
+{
+    $breadcrumbs->parent('hospital_info');
+    $breadcrumbs->push('Doctor List', route('doctor_list'));
+});
+
 Breadcrumbs::register('districts', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
@@ -87,6 +93,12 @@ Breadcrumbs::register('doctor_info', function($breadcrumbs)
 {
     $breadcrumbs->parent('doctor');
     $breadcrumbs->push('Doctor Info', route('doctor_info'));
+});
+
+Breadcrumbs::register('profile', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin');
+    $breadcrumbs->push('Profile', route('profile'));
 });
 
 

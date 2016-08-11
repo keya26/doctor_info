@@ -13,4 +13,9 @@ class Category extends Model
 
         return $this->belongsto('App\District');
     }
+    public function hospital()
+    {
+
+        return $this->hasmany('App\Hospital');
+    }
 }

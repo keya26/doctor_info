@@ -31,4 +31,8 @@ class District extends Model
     {
         return $this->hasmany('App\Hospital');
     }
+    public function doctor()
+    {
+        return $this->hasmany('App\Doctor');
+    }
 }

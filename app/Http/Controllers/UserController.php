@@ -116,7 +116,9 @@ class UserController extends Controller
          $district=District::find($id); 
 
          $categories=Category::all();
-         $hospitals=Hospital::find($id); 
+         $category=Category::find($id);
+         $hospitals=Hospital::all();
+         $hospital=Hospital::find($id);
         
         // $districts=District::where('division_id', '=', $divisions->id)->get();
         
@@ -129,9 +131,38 @@ class UserController extends Controller
                     ->with('division', $division)
                     ->with('district', $district)
                     ->with('categories',$categories)
-                    ->with('hospitals',$hospitals);
+                    ->with('category',$category)
+                    ->with('hospitals',$hospitals)
+                    ->with('hospital',$hospital);
     }
+    
+    public function doctor_list($id)
+    {
+        $divisions = Division::all();
+         $division=Division::find($id); 
 
+         $district=District::find($id); 
+
+         $categories=Category::all();
+         $category=Category::find($id);
+         $hospitals=Hospital::all();
+         $hospital=Hospital::find($id);
+        
+        // $districts=District::where('division_id', '=', $divisions->id)->get();
+        
+        // if (!$district)
+        // {
+        //     throw new NotFoundHttpException;
+        // }
+        return view('users.doctor_list')
+                    ->with('divisions',  $divisions)
+                    ->with('division', $division)
+                    ->with('district', $district)
+                    ->with('categories',$categories)
+                    ->with('category',$category)
+                    ->with('hospitals',$hospitals)
+                    ->with('hospital',$hospital);
+    }
     public function doctor($id)
     {
         
@@ -157,13 +188,15 @@ class UserController extends Controller
 
     public function doctor_info($id)
     {
-        $divisions = Division::all();
+         $divisions = Division::all();
          $division=Division::find($id); 
 
          $district=District::find($id); 
 
          $dcategories=Dcategory::all();
-         $doctor=doctor::find($id);  
+         $dcategory=Dcategory::find($id);
+         $doctors=Doctor::all();
+         $doctor=Doctor::find($id);
         
         // $districts=District::where('division_id', '=', $divisions->id)->get();
         
@@ -176,6 +209,8 @@ class UserController extends Controller
                     ->with('division', $division)
                     ->with('district', $district)
                     ->with('dcategories',$dcategories)
+                    ->with('dcategory',$dcategory)
+                    ->with('doctors',$doctors)
                     ->with('doctor',$doctor);
     }
 

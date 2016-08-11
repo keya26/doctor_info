@@ -93,8 +93,8 @@
           
         </li>
      
-        <li>
-          <a href="#">
+        <li >
+          <a href="{!! URL::route('profile') !!}">
             <i class="fa fa-user"></i> <span>Profile</span>
           </a>
         </li>

@@ -1,4 +1,4 @@
-<?php $active="doctor"; ?>
+<?php $active="hospital"; ?>
 @extends('layouts.dashboard')
 @section('content') 
 
