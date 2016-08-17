@@ -16,6 +16,7 @@ return array(
     'CreateHospitalsTable' => $baseDir . '/database/migrations/2016_04_28_183311_create_hospitals_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePhotosTable' => $baseDir . '/database/migrations/2016_08_16_065538_create_photos_table.php',
+    'CreateSerialsTable' => $baseDir . '/database/migrations/2016_08_16_184131_create_serials_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'DcategoriesTableSeeder' => $baseDir . '/database/seeds/DcategoriesTableSeeder.php',
